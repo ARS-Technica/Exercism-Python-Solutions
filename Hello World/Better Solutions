@@ -1,0 +1,16 @@
+# Better solutions. Not mine.
+
+
+def hello(name='World'):
+    return 'Hello, {0}!'.format(name)
+
+#%%
+
+
+def hello(name=''):
+    if not name:
+        say = "Hello, World!"
+    else:
+        say = "Hello, " + name + "!"
+        
+    return say
