@@ -1,0 +1,24 @@
+# https://exercism.org/tracks/python/exercises/little-sisters-vocab/solutions/ARS-Technica
+
+def add_prefix_un(word):
+    return "un" + word
+    
+def make_word_groups(vocab_words):
+    prefix = vocab_words[0]
+    new_words = []
+    for i in vocab_words[1::]:
+        new_words.append(prefix + i)
+    return prefix + ' :: ' + ' :: '.join(new_words)
+    
+def remove_suffix_ness(word):
+    word = word[:-4]
+    if word[-1] == 'i':
+        word = word[:-1] + 'y'
+    return word
+    
+def noun_to_verb(sentence, index):
+    new_sentence = sentence.split(' ')
+    adj = new_sentence[index]
+    if adj[-1] == '.':
+        return adj[:-1] + 'en'
+    return adj + 'en'
