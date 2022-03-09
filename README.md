@@ -12,3 +12,4 @@ Solutions to programming exercises on exercism.org written in Python.
 | 05 | [Ghost Gobble Arcade Game](https://exercism.org/tracks/python/exercises/ghost-gobble-arcade-game) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Ghost%20Gobble%20Arcade%20Game) | Comparisons, Conditionals  | 
 | 06 | [Black Jack](https://exercism.org/tracks/python/exercises/black-jack) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Black%20Jack) | Comparisons | 
 | 07 | [Card Games](https://exercism.org/tracks/python/exercises/card-games) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Card%20Games) | Lists | 
+| 08 | [Currency Exchange](https://exercism.org/tracks/python/exercises/currency-exchange) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Card%20Games) | Numbers | 
