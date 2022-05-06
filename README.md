@@ -14,3 +14,4 @@ Solutions to programming exercises on exercism.org written in Python.
 | 07 | [Card Games](https://exercism.org/tracks/python/exercises/card-games) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Card%20Games) | Lists | 
 | 08 | [Currency Exchange](https://exercism.org/tracks/python/exercises/currency-exchange) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Currency%20Exchange) | Numbers | 
 | 09 | [Grains](https://exercism.org/tracks/python/exercises/grains) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Grains) | Numbers | 
+| 10 | [Chaitana's Colossal Coaster](https://exercism.org/tracks/python/exercises/chaitanas-colossal-coaster) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Chaitana's%20Colossal%20Coaster) | List Methods | 
