@@ -1,1 +1,5 @@
+# https://exercism.org/tracks/python/exercises/two-fer/solutions/ARS-Technica
 
+def two_fer(name = 'you'):
+    sentence = 'One for you, one for me.'
+    return sentence.replace('you', name)
