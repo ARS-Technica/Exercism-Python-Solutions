@@ -9,7 +9,7 @@ def is_triangle(sides):
 
 def equilateral(sides):
     if is_triangle(sides):
-        return sides.count(sides[0]) == 3
+        return len(set(sides)) == 1
     return False
 
 def isosceles(sides):
