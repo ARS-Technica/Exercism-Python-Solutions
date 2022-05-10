@@ -1,4 +1,4 @@
-# 
+# https://exercism.org/tracks/python/exercises/triangle/solutions/ARS-Technica
 
 def is_triangle(sides):
     a, b, c = sides[0], sides[1], sides[2]
