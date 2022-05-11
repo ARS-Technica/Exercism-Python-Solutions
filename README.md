@@ -22,5 +22,4 @@ Solutions to programming exercises on exercism.org written in Python.
 | 15 | [Tisbury Treasure Hunt](https://exercism.org/tracks/python/exercises/tisbury-treasure-hunt) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Tisbury%20Treasure%20Hunt) | Tuples | 
 | 16 | [Raindrops](https://exercism.org/tracks/python/exercises/raindrops) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Raindrops) | Modulo | 
 | 17 | [Matrix](https://exercism.org/tracks/python/exercises/matrix) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Matrix) | Class | 
-
-
+| 18 | [Hamming](https://exercism.org/tracks/python/exercises/hamming) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Hamming) | Exceptions | 
