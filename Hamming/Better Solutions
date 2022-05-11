@@ -1,0 +1,24 @@
+def distance(str1, str2):
+    difference = 0
+    for a, b in zip(str1, str2):
+        if a != b:
+            difference += 1
+    return difference
+
+#%%
+
+def distance(strand_a, strand_b):
+    if len(strand_a) != len(strand_b):
+        raise ValueError("Strands must be of equal length.")
+    return sum(char_a != char_b for char_a, char_b in zip(strand_a, strand_b))
+
+#%%
+
+def distance(strand1, strand2):
+    return sum(a != b for a, b in zip(strand1, strand2))
+
+#%%
+
+def distance(strand_a, strand_b):
+    return sum(map(ne, strand_a, strand_b))
+
