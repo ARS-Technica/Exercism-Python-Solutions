@@ -19,3 +19,7 @@ Solutions to programming exercises on exercism.org written in Python.
 | 12 | [Making the Grade](https://exercism.org/tracks/python/exercises/making-the-grade) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Making%20the%20Grade) | Loop | 
 | 13 | [High Scores](https://exercism.org/tracks/python/exercises/high-scores) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/High%20Scores) | Loop | 
 | 14 | [Triangle](https://exercism.org/tracks/python/exercises/triangle) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Triangle) | Bools, Comparisons | 
+| 15 | [Tisbury Treasure Hunt](https://exercism.org/tracks/python/exercises/tisbury-treasure-hunt) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Tisbury%20Treasure%20Hunt) | Tuples | 
+
+
+
