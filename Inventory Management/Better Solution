@@ -1,0 +1,51 @@
+# https://exercism.org/tracks/python/exercises/inventory-management/solutions/DrCoke
+
+def create_inventory(items):
+    """
+ 
+    :param items: list - list of items to create an inventory from.
+    :return:  dict - the inventory dictionary.
+    """
+
+    answer = {}
+    for i in items:
+        answer.update({i: items.count(i)})
+    return answer
+
+#%%
+
+# https://exercism.org/tracks/python/exercises/inventory-management/solutions/aloliveira
+
+def create_inventory(items):
+    """
+
+    :param items: list - list of items to create an inventory from.
+    :return:  dict - the inventory dictionary.
+    """
+
+    return dict((x, items.count(x)) for x in set(items))
+
+
+def list_inventory(inventory):
+    """
+ 
+    :param inventory: dict - an inventory dictionary.
+    :return: list of tuples - list of key, value pairs from the inventory dictionary.
+    """
+
+    return [(item, quantity) for item, quantity in inventory.items() if quantity > 0]
+
+#%%
+
+from collections import Counter
+
+def create_inventory(items):
+    """Creates a dict mapping item_name to quantity from the items list.
+ 
+    :param items: list - list of items to create an inventory from.
+    :return:  dict - the inventory dictionary.
+    """
+
+    return Counter(items)
+
+#%%
