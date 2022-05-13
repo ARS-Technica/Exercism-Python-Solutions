@@ -1,0 +1,35 @@
+# https://exercism.org/tracks/python/exercises/word-count/solutions/ARS-Technica
+
+from re import findall
+
+def count_words(sentence):
+    sentence = sentence.replace(',', ' ')
+    sentence = sentence.replace('_', ' ')
+    sentence = sentence.lower()
+    sentence = findall(r"\w+(?:'\w+)?", sentence)
+
+    freq = {}
+
+    for word in sentence:
+        if word in freq:
+            freq[word] += 1
+        else:
+            freq[word] = 1
+
+    return freq
+
+#%%
+
+from re import findall
+
+def count_words(sentence):
+    sentence = findall(r"[a-z0-9]+(?:'[a-z]+)?", sentence.lower())
+    freq = {}
+
+    for word in sentence:
+        if word in freq:
+            freq[word] += 1
+        else:
+            freq[word] = 1
+
+    return freq
