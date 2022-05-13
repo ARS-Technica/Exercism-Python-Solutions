@@ -16,3 +16,13 @@ if __name__ == "__main__":
     
     
 #%%
+
+# One line solution
+  
+def abbreviate(words):
+    return "".join([word[0].capitalize() for word in words.replace('-', ' ').replace('_', ' ').split()])
+
+
+if __name__ == "__main__": 
+    print(abbreviate("As Soon As Possible"))                    # ASAP
+    print(abbreviate("Liquid-crystal display"))                 # LCD
