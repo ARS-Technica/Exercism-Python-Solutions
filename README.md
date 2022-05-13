@@ -25,3 +25,4 @@ Solutions to programming exercises on exercism.org written in Python.
 | 18 | [Hamming](https://exercism.org/tracks/python/exercises/hamming) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Hamming) | Exceptions | 
 | 19 | [Inventory Management](https://exercism.org/tracks/python/exercises/inventory-management) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Inventory%20Management) | Dictionaries | 
 | 20 | [Twelve Days](https://exercism.org/tracks/python/exercises/twelve-days) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Twelve%20Days) | Lists | 
+| 21 | [Acronym](https://exercism.org/tracks/python/exercises/acronym) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Twelve%20Days) | Lists | 
