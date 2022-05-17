@@ -28,3 +28,4 @@ Solutions to programming exercises on exercism.org written in Python.
 | 21 | [Acronym](https://exercism.org/tracks/python/exercises/acronym) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Acronym) | Strings | 
 | 22 | [Word Count](https://exercism.org/tracks/python/exercises/word-count) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Word%20Count) | Dictionaries, Strings | 
 | 23 | [Cater Waiter](https://exercism.org/tracks/python/exercises/cater-waiter) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Cater%20Waiter) | Sets |
+| 23 | [Isogram](https://exercism.org/tracks/python/exercises/isogram) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Isogram) | Sets |
