@@ -1,0 +1,5 @@
+# https://exercism.org/tracks/python/exercises/isogram/solutions/ARS-Technica
+
+def is_isogram(string):
+    string = string.lower().replace('-', '').replace(' ', '')
+    return len(string) == len(set(string))
