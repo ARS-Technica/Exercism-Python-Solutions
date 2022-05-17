@@ -1,17 +1,17 @@
-
+# https://exercism.org/tracks/python/exercises/ellens-alien-game/solutions/ARS-Technica
 
 """Solution to Ellen's Alien Game exercise."""
-     
+
 class Alien:
     """Create an Alien object with location x_coordinate and y_coordinate.
-
+ 
     Attributes
     ----------
     (class)total_aliens_created: int
     x_coordinate: int - Position on the x-axis.
     y_coordinate: int - Position on the y-axis.
     health: int - Amount of health points.
-
+ 
     Methods
     -------
     hit(): Decrement Alien health by one point.
@@ -19,14 +19,13 @@ class Alien:
     teleport(new_x_coordinate, new_y_coordinate): Move Alien object to new coordinates.
     collision_detection(other): Implementation TBD.
     """
-
-    counter = 0
     health = 3
+    total_aliens_created = 0
 
     def __init__(self, x_coordinate, y_coordinate):
         self.x_coordinate = x_coordinate
         self.y_coordinate = y_coordinate
-        Alien.counter += 1
+        Alien.total_aliens_created += 1
 
     def hit(self):
         # Decrement health variable by 1.
@@ -39,29 +38,23 @@ class Alien:
         # Alter instance variable location_x and location_y
         self.x_coordinate = new_x_coordinate
         self.y_coordinate = new_y_coordinate
-        location = (new_x_coordinate, new_y_coordinate)
         return new_x_coordinate, new_y_coordinate
-        #return location
 
     def collision_detection(self, other_object):
         # Stubbing or placholding the body of this method.
         pass
 
-    def total_aliens_created(self):
-        return Alien.counter
-
 def new_aliens_collection(aliens):
     """
-
+ 
     :param coordinate_pairs: tuple of (x_coordinate: int, y_coordinate: int)
     :return: list of (Alien instances)
-
+ 
     This function should return a `list` of Alien instances,
     each initialized with a single coordinate pair
     """
-
     res = []
     for alien in aliens:
         if isinstance(alien, Alien):
-    	    res.append((alien.x_coordinate, alien.y_coordinate))
+            res.append((alien.x_coordinate, alien.y_coordinate))
     return res
