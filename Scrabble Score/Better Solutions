@@ -1,0 +1,41 @@
+# https://exercism.org/tracks/python/exercises/scrabble-score/solutions/yosnoop
+
+scores = {}
+
+for k, v in {
+            "AEIOULNRST": 1,
+            "DG": 2,
+            "BCMP": 3,
+            "FHVWY": 4,
+            "K": 5,
+            "JX": 8,
+            "QZ": 10
+        }.items():
+    scores.update({x: v for x in k})
+
+def score(word):
+    return sum([scores[char] for char in word.upper()])
+
+#%%
+
+# https://exercism.org/tracks/python/exercises/scrabble-score/solutions/ebiven
+
+SCORE_MAP = {
+    1  : 'aeioulnrst',
+    2  : 'dg',
+    3  : 'bcmp',
+    4  : 'fhvwy',
+    5  : 'k',
+    8  : 'jx',
+    10 : 'qz'
+}
+
+# Transposed for easier scoring.
+POINTS = { v: k for k, vs in SCORE_MAP.items() for v in vs }
+
+def score(word):
+    return sum(POINTS[l] for l in word.lower())
+
+#%%
+
+
