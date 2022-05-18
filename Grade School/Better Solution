@@ -1,0 +1,60 @@
+# https://exercism.org/tracks/python/exercises/grade-school/solutions/mrvalbass
+
+""" Grade School"""
+class School:
+    def __init__(self):
+        self.students = {}
+        self.addition = []
+        
+    def add_student(self, name, grade):
+        """
+        Parameters
+        ----------
+        name : string
+            Name of the student to add in the school.
+        grade : int
+            grade of the student to add in the school.
+ 
+        Returns
+        -------
+        dict
+            Updated dict (key = name, value = grade) with the new student linked to it's grade
+        """
+        if name not in self.students.keys():
+            self.addition.append(True)
+            return self.students.update({name : grade})
+        else:
+            self.addition.append(False)
+            return f"{name} already in the roster"
+        
+    def roster(self):
+        """
+        Returns
+        -------
+        register : list
+            list of all students order by grade then by alphabetical order.
+        """
+        return [name for grade_number in sorted(set(self.students.values())) for name in self.grade(grade_number)]
+        
+    def grade(self, grade_number):
+        """
+        Parameters
+        ----------
+        grade_number : int
+            grade of which we want the students in 
+ 
+        Returns
+        -------
+        list
+            names of the students in this grade ordered by alphabetical order.
+        """
+        return sorted([name for name,grade in self.students.items() if grade == grade_number])
+        
+    def added(self):
+        """
+        Returns
+        -------
+        list
+           history of the addition (True if the student was added, False otherwise)
+        """
+        return self.addition
