@@ -32,4 +32,4 @@ Solutions to programming exercises on exercism.org written in Python.
 | 24 | [Ellen's Alien Game](https://exercism.org/tracks/python/exercises/ellens-alien-game) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Ellen's%20Alien%20Game) | Classes |
 | 25 | [Scrabble Score](https://exercism.org/tracks/python/exercises/scrabble-score) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Scrabble%20Score) | Dictionaries |
 | 26 | [Kindergarten Garden](https://exercism.org/tracks/python/exercises/kindergarten-garden) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Kindergarten%20Garden) | Classes |
-
+| 27 | [Grade School](https://exercism.org/tracks/python/exercises/grade-school) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Grade%20School) | Classes |
