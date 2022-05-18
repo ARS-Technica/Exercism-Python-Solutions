@@ -1,0 +1,23 @@
+# https://exercism.org/tracks/python/exercises/kindergarten-garden/solutions/ARS-Technica
+
+class Garden:
+    def __init__(self, diagram, students = ['Alice', 'Bob', 'Charlie', 'David',
+                                            'Eve', 'Fred', 'Ginny', 'Harriet',
+                                            'Ileana', 'Joseph', 'Kincaid', 'Larry']):
+        self.diagram = diagram.split()
+        self.students = sorted(students)
+        # The secret sauce was in sorting the student list!
+
+    def plants(self, student):
+        abbreviations = {'C':'Clover', 'G':'Grass', 'R':'Radishes', 'V':'Violets'}
+        plant_names = []
+
+        for row in self.diagram:
+            position = (self.students.index(student) * 2)
+            plant_names.append(row[position])
+            plant_names.append(row[position + 1]) 
+
+        for idx, plant in enumerate(plant_names):
+            plant_names[idx] = abbreviations[plant]
+
+        return plant_names
