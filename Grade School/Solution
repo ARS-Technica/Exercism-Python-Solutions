@@ -1,0 +1,35 @@
+# https://exercism.org/tracks/python/exercises/grade-school/solutions/ARS-Technica
+
+class School:
+    def __init__(self):
+        self.grades = {}
+        self.inserted = []
+        self.students = []
+
+    def add_student(self, grade, name):
+        if name not in self.students:
+            self.inserted.append(True)
+            self.students.append(name)
+
+            if grade not in self.grades:
+                self.grades[grade] = [name]
+            else:
+                self.grades[grade].append(name)
+
+        else:
+            self.inserted.append(False)
+
+    def roster(self):
+        all_students = []
+
+        for grade in sorted(self.grades.keys()): 
+            for students in sorted(self.grades[grade]):
+                all_students.append(students)
+
+        return all_students
+
+    def grade(self, grade_number):
+        return sorted(self.grades.get(grade_number, []))
+
+    def added(self):
+        return self.inserted
