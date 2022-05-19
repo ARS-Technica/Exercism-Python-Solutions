@@ -1,0 +1,5 @@
+# https://exercism.org/tracks/python/exercises/pangram/solutions/ARS-Technica
+
+def is_pangram(sentence):
+    chars = len(set([char.lower() for char in sentence if char.isalpha()]))
+    return chars == 26
