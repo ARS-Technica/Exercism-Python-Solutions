@@ -34,4 +34,4 @@ Solutions to programming exercises on exercism.org written in Python.
 | 26 | [Kindergarten Garden](https://exercism.org/tracks/python/exercises/kindergarten-garden) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Kindergarten%20Garden) | Classes |
 | 27 | [Grade School](https://exercism.org/tracks/python/exercises/grade-school) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Grade%20School) | Classes |
 | 28 | [Luhn](https://exercism.org/tracks/python/exercises/luhn) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Luhn) | Classes |
-| 29 | [Pangram]([https://exercism.org/tracks/python/exercises/luhn](https://exercism.org/tracks/python/exercises/pangram)) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Pangram) | |
+| 29 | [Pangram](https://exercism.org/tracks/python/exercises/pangram)| [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Pangram) | Sets, Strings |
