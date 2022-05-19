@@ -1,0 +1,22 @@
+
+# https://exercism.org/tracks/python/exercises/pangram/solutions/Tahnan
+
+from string import ascii_lowercase
+
+ALPHABET = set(ascii_lowercase)
+
+def is_pangram(string):
+    return ALPHABET.issubset(string.lower())
+
+
+#%%
+
+# https://exercism.org/tracks/python/exercises/pangram/solutions/pilino1234
+
+from string import ascii_lowercase
+
+def is_pangram(sentence):
+    return all(letter in sentence.lower() for letter in ascii_lowercase)
+
+
+#%%
