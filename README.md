@@ -37,3 +37,4 @@ Solutions to programming exercises on exercism.org written in Python.
 | 29 | [Pangram](https://exercism.org/tracks/python/exercises/pangram)| [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Pangram) | Sets, Strings |
 | 30 | [Protein Translation](https://exercism.org/tracks/python/exercises/protein-translation) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Protein%20Translation) | Dictionaries, Loops |
 | 31 | [Armstrong Numbers](https://exercism.org/tracks/python/exercises/armstrong-numbers) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Protein%20Translation) | Generators |
+| 32 | [Robot Name](https://exercism.org/tracks/python/exercises/robot-name) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Robot%20Name) | Classes |
