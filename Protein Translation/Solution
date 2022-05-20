@@ -1,0 +1,22 @@
+# 
+
+def proteins(strand):
+    amino_acids = {'AUG':'Methionine', 'UUU':'Phenylalanine', 'UUC':'Phenylalanine', 
+                   'UUA':'Leucine', 'UUG':'Leucine', 'UCU':'Serine',
+                    'UCC':'Serine', 'UCA':'Serine', 'UCG':'Serine', 'UAU':'Tyrosine', 
+                    'UAC':'Tyrosine', 'UGU':'Cysteine', 'UGC':'Cysteine', 'UGG':'Tryptophan',
+                    'UAA':'STOP', 'UAG':'STOP', 'UGA':'STOP',}
+
+    codons = []
+    strand = list(strand)
+
+    while strand:
+        codon = ''
+        codon += strand.pop(0)
+        codon += strand.pop(0)
+        codon += strand.pop(0)
+        if amino_acids[codon] == 'STOP':
+            return codons
+        codons.append(amino_acids[codon])
+
+    return codons
