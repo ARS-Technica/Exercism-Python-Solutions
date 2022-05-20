@@ -1,0 +1,23 @@
+# https://exercism.org/tracks/python/exercises/robot-name/solutions/ARS-Technica
+
+import random 
+
+class Robot(object):
+    generated_names = set()
+
+    def __init__(self):
+        self.name = self.generate()
+        self.generated_names.add(self.name)
+
+    def generate(self):
+        return (chr(random.randint(ord('A'), ord('Z'))) + 
+                chr(random.randint(ord('A'), ord('Z'))) +   
+                str(random.randint(100, 999)))
+
+    def reset(self):
+        self.name = self.generate()
+
+        if self.name in self.generated_names:
+            self.name = self.generate()
+        else:
+            return self.name
