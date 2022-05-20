@@ -1,0 +1,7 @@
+# https://exercism.org/tracks/python/exercises/armstrong-numbers/solutions/ARS-Technica
+
+def is_armstrong_number(number):
+    nums = list(str(number))
+    power = len(nums)
+    raised = sum([int(n)**power for n in nums])
+    return raised == number
