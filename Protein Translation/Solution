@@ -1,4 +1,4 @@
-# 
+# https://exercism.org/tracks/python/exercises/protein-translation/solutions/ARS-Technica
 
 def proteins(strand):
     amino_acids = {'AUG':'Methionine', 'UUU':'Phenylalanine', 'UUC':'Phenylalanine', 
