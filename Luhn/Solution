@@ -1,0 +1,39 @@
+# https://exercism.org/tracks/python/exercises/luhn/solutions/ARS-Technica
+
+class Luhn:
+    def __init__(self, card_num):
+        self.card_num = card_num
+
+    def valid(self):
+        nums = []
+
+        # Spaces are allowed in the input, but they should be stripped before checking.
+        self.card_num = self.card_num.replace(" ", "")
+
+        # Strings of length 1 or less are not valid.
+        if len(self.card_num) <= 1: return False
+        # Must come AFTER space replacement in case of inputs of one digit padded with spaces.
+
+        for char in self.card_num:
+            try:
+                char = int(char)
+                nums.append(char)
+            #  All other non-digit characters are disallowed.
+            except:
+                return False
+
+        # Starting from the right...
+        nums = nums[::-1]
+
+        # The first step of the Luhn algorithm is to double every second digit
+        double = [(n * 2) for n in nums[1::2]]
+
+        # If doubling the number results in a number greater than 9 then subtract 9 from the product.
+        odds = [n if n < 10 else (n - 9) for n in double]
+        evens = nums[0::2][::-1]
+
+        #Sum the digits
+        total = sum(evens) + sum(odds)
+
+        #If the sum is evenly divisible by 10, then the number is valid. 
+        return total % 10 == 0
