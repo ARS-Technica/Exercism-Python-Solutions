@@ -1,0 +1,28 @@
+# https://exercism.org/tracks/python/exercises/series/solutions/ARS-Technica
+
+def slices(series, length):   
+    # if the slice length is zero.
+    if length == 0:
+        raise ValueError("slice length cannot be zero")
+
+    # if the slice length is negative.
+    if length < 0:
+        raise ValueError("slice length cannot be negative")
+
+    # if the series provided is empty.
+    if len(series) == 0:
+        raise ValueError("series cannot be empty")
+
+    # if the slice length is longer than the series.
+    if len(series) < length:
+        raise ValueError("slice length cannot be greater than series length")
+
+    res = []
+    series = list(series) 
+
+    for idx in range(0, len(series) - (length - 1)):
+        temp = []
+        temp.append(series[idx:idx+length]) 
+        res.append(''.join(temp[0]))
+
+    return res
