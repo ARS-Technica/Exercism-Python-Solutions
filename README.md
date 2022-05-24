@@ -38,3 +38,4 @@ Solutions to programming exercises on exercism.org written in Python.
 | 30 | [Protein Translation](https://exercism.org/tracks/python/exercises/protein-translation) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Protein%20Translation) | Dictionaries, Loops |
 | 31 | [Armstrong Numbers](https://exercism.org/tracks/python/exercises/armstrong-numbers) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Protein%20Translation) | Generators |
 | 32 | [Robot Name](https://exercism.org/tracks/python/exercises/robot-name) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Robot%20Name) | Classes |
+| 33 | [Perfect Numbers](https://exercism.org/tracks/python/exercises/perfect-numbers) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Perfect%20Numbers) | Exceptions |
