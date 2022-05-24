@@ -1,0 +1,30 @@
+# https://exercism.org/tracks/python/exercises/anagram/solutions/ARS-Technica
+
+def find_anagrams(word, candidates):
+    anagrams = []
+
+    for idx in candidates:
+        if sorted(list(word.lower())) == sorted(list(idx.lower())):
+            if word.lower() != idx.lower():
+                anagrams.append(idx)
+
+    return anagrams
+
+
+if __name__ == '__main__': 
+    print(find_anagrams("diaper", ["hello", "world", "zombies", "pants"]))                                  #[]
+    print(find_anagrams("solemn", ["lemons", "cherry", "melons"]))                                          #["lemons", "melons"]
+    print(find_anagrams("good", ["dog", "goody"]))                                                          #[]
+    print(find_anagrams("listen", ["enlists", "google", "inlets", "banana"]))                               #["inlets"]
+    print(find_anagrams("allergy", ["gallery", "ballerina", "regally", "clergy", "largely", "leading"]))    #["gallery", "regally", "largely"]
+    print(find_anagrams("nose", ["Eons", "ONES"]))                                                          #["Eons", "ONES"]
+    print(find_anagrams("mass", ["last"]))                                                                  #[]
+    print(find_anagrams("Orchestra", ["cashregister", "Carthorse", "radishes"]))                            #["Carthorse"]
+    print(find_anagrams("Orchestra", ["cashregister", "carthorse", "radishes"]))                            #["carthorse"]
+    print(find_anagrams("orchestra", ["cashregister", "Carthorse", "radishes"]))                            #["Carthorse"]
+    print(find_anagrams("go", ["go Go GO"]))                                                                #[]
+    print(find_anagrams("tapper", ["patter"]))                                                              #[]
+    print(find_anagrams("BANANA", ["BANANA"]))                                                              #[]
+    print(find_anagrams("BANANA", ["Banana"]))                                                              #[]
+    print(find_anagrams("BANANA", ["banana"]))                                                              #[]
+    print(find_anagrams("LISTEN", ["LISTEN", "Silent"]))                                                    #["Silent"]
