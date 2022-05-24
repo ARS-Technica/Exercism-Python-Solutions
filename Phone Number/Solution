@@ -1,0 +1,45 @@
+class PhoneNumber:
+    def __init__(self, number):
+        #removing extraneous chars from the number string
+        self.number = number.replace('.', '').replace('-','').replace('(','').replace(')','').replace('+','').replace(' ','')
+        #checks for letters and punctuation in the numbers
+        if self.number.isdigit() == False:
+            if self.number.isalnum() == False:
+                raise ValueError("punctuations not permitted")
+            raise ValueError("letters not permitted")
+        
+        #checking if number is too small
+        if len(self.number) <= 9:
+            raise ValueError("incorrect number of digits")
+        #checking if number is including the country code
+        if len(self.number) > 10:
+            if int(self.number[0]) == 1 and len(self.number) == 11:
+                #ignores the correct country code
+                self.number = self.number[1:]
+            if int(self.number[0]) != 1 and len(self.number) == 11:
+                #raises an error for incorrect country code
+                raise ValueError("11 digits must start with 1")
+        #raises an error for entries that are still too
+        #large 
+        if len(self.number) > 11:
+            raise ValueError("more than 11 digits")
+                
+        #adding the area code here since all country code
+        #tests are done
+        self.area_code = self.number[:3]
+        #checking for the area code and exchange code starting
+        #with either a 0 or a 1
+        if len(self.number) == 10:
+            if int(self.area_code[0]) == 0:
+                raise ValueError("area code cannot start with zero")
+            if int(self.area_code[0]) == 1:
+                raise ValueError("area code cannot start with one")
+            if int(self.number[3]) == 0:
+                raise ValueError("exchange code cannot start with zero")
+            if int(self.number[3]) == 1:
+                raise ValueError("exchange code cannot start with one")
+    #have to make another method since the tests call a method
+    #where values can be returned since values cannot be returned 
+    #in the __innit__ method
+    def pretty(self):
+        return '({})-{}-{}'.format(self.area_code,self.number[3:6],self.number[6:])
