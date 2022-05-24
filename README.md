@@ -40,3 +40,4 @@ Solutions to programming exercises on exercism.org written in Python.
 | 32 | [Robot Name](https://exercism.org/tracks/python/exercises/robot-name) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Robot%20Name) | Classes |
 | 33 | [Perfect Numbers](https://exercism.org/tracks/python/exercises/perfect-numbers) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Perfect%20Numbers) | Exceptions |
 | 34 | [Collatz Conjecture](https://exercism.org/tracks/python/exercises/collatz-conjecture) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Collatz%20Conjecture) | Numbers |
+| 35 | [Anagram](https://exercism.org/tracks/python/exercises/anagram) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Anagram) | List Comprehension, Lists |
