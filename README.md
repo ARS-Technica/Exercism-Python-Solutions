@@ -42,3 +42,4 @@ Solutions to programming exercises on exercism.org written in Python.
 | 34 | [Collatz Conjecture](https://exercism.org/tracks/python/exercises/collatz-conjecture) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Collatz%20Conjecture) | Numbers |
 | 35 | [Anagram](https://exercism.org/tracks/python/exercises/anagram) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Anagram) | List Comprehension, Lists |
 | 36 | [Series](https://exercism.org/tracks/python/exercises/series) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Series) | Sequences |
+| 37 | [Phone Number](https://exercism.org/tracks/python/exercises/phone-number) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Phone%20Number) | Raising and Handling Errors, String Formatting, Strings |
