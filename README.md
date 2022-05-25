@@ -44,3 +44,4 @@ Solutions to programming exercises on exercism.org written in Python.
 | 36 | [Series](https://exercism.org/tracks/python/exercises/series) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Series) | Sequences |
 | 37 | [Phone Number](https://exercism.org/tracks/python/exercises/phone-number) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Phone%20Number) | Raising and Handling Errors, String Formatting, Strings |
 | 38 | [Difference Of Squares](https://exercism.org/tracks/python/exercises/difference-of-squares/) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Difference%20Of%20Squares) | Functions, List Comprehension |
+| 39 | [Isbn Verifier](https://exercism.org/tracks/python/exercises/isbn-verifier) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Isbn%20Verifier) | |
