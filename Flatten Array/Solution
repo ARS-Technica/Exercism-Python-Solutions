@@ -1,0 +1,63 @@
+# https://exercism.org/tracks/python/exercises/flatten-array/solutions/ARS-Technica
+
+# Failed. Works for up to one level of depth
+    
+def flatten(iterable):
+    return [i for i in iterable if i != None]
+     
+
+#%%
+
+# Failed. Introduced recursion, but the loop is a mess
+
+def flatten(iterable):
+    res = []
+
+    for i in iterable:
+        if i != None:
+            if type(i) == int:
+                res.append(i)
+            elif type(i) == list:
+                for j in i:
+                    if type(j) == int:
+                        res.append(j)
+                    elif type(j) == list:
+                        flatten(j)
+                    else:
+                        pass
+            else:
+                pass
+        else:
+            pass
+
+    return res
+
+    
+#%%
+
+# Hey!  I discovered the existance of isinstance()!
+
+def flatten(iterable):
+    res = []
+
+    for i in iterable:
+        if isinstance(i, int):
+            res.append(i)
+        elif isinstance(i, list):
+            #res.append(flatten(i))   # Lost twenty minutes of my life figuring out why this doesn't work 
+            res.extend(flatten(i)) 
+
+    return res
+            
+
+if __name__ == '__main__':
+    print(flatten([1, 2, None]))                                                #[1, 2]
+    print(flatten([None, None, 3]))                                             #[3]
+    print(flatten([1, None, None, 4]))                                          #[1, 4]
+    print(flatten([0, 1, 2]))                                                   #[0, 1, 2]
+    print(flatten([[[]]]))                                                      #[]
+    print(flatten([None, [[[None]]], None, None, [[None, None], None], None]))  #[]
+    print(flatten([1, [2, 3, 4, 5, 6, 7], 8]))                                  #[1, 2, 3, 4, 5, 6, 7, 8]
+    print(flatten([0, 2, [[2, 3], 8, 100, 4, [[[50]]]], -2]))                   #[0, 2, 2, 3, 8, 100, 4, 50, -2]
+    print(flatten([1, [2, [[3]], [4, [[5]]], 6, 7], 8]))                        #[1, 2, 3, 4, 5, 6, 7, 8]
+    print(flatten([0, 2, [[2, 3], 8, [[100]], None, [[None]]], -2]))            #[0, 2, 2, 3, 8, 100, -2]
