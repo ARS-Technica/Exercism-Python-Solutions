@@ -46,3 +46,4 @@ Solutions to programming exercises on exercism.org written in Python.
 | 38 | [Difference Of Squares](https://exercism.org/tracks/python/exercises/difference-of-squares/) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Difference%20Of%20Squares) | Functions, List Comprehension |
 | 39 | [Isbn Verifier](https://exercism.org/tracks/python/exercises/isbn-verifier) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Isbn%20Verifier) | |
 | 40 | [Palindrome Products](https://exercism.org/tracks/python/exercises/palindrome-products) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Palindrome%20Products) | Functions, Numbers |
+| 41 | [Reverse String](https://exercism.org/tracks/python/exercises/reverse-string) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Reverse%20String) | Strings |
