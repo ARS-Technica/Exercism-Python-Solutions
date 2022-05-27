@@ -14,6 +14,16 @@ def flatten(iterable):
 
 #%%
 
+# https://exercism.org/tracks/python/exercises/flatten-array/solutions/buck-yeh
+
+def flatten(iterable):
+    ret = []
+    for i in iterable:
+        if not isinstance(i, str) and hasattr(i, '__iter__'):
+            ret += flatten(i)
+        elif i != None:
+            ret.append(i)
+    return ret
 
 
-
+#%%
