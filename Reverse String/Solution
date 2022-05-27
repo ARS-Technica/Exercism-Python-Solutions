@@ -1,0 +1,4 @@
+# https://exercism.org/tracks/python/exercises/reverse-string/solutions/ARS-Technica
+
+def reverse(text):
+    return text[::-1]
