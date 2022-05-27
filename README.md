@@ -48,3 +48,4 @@ Solutions to programming exercises on exercism.org written in Python.
 | 40 | [Palindrome Products](https://exercism.org/tracks/python/exercises/palindrome-products) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Palindrome%20Products) | Functions, Numbers |
 | 41 | [Reverse String](https://exercism.org/tracks/python/exercises/reverse-string) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Reverse%20String) | Strings |
 | 42 | [Leap](https://exercism.org/tracks/python/exercises/leap) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Leap) | Bools |
+| 43 | [Flatten Array](https://exercism.org/tracks/python/exercises/flatten-array) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Flatten%20Array) | Lists |
