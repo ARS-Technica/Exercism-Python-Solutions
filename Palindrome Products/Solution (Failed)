@@ -1,0 +1,94 @@
+def largest(min_factor, max_factor):
+    """Given a range of numbers, find the largest palindromes which
+       are products of two numbers within that range.
+
+    :param min_factor: int with a default value of 0
+    :param max_factor: int
+    :return: tuple of (palindrome, iterable).
+             Iterable should contain both factors of the palindrome in an arbitrary order.
+    """
+
+    # if the max_factor is less than the min_factor
+    if max_factor < min_factor: raise ValueError("min must be <= max")
+
+    initial_factors = [n for n in range(min_factor, max_factor + 1)]
+    possible_products = []
+
+    for i in range(0, len(initial_factors)):
+        for j in range(0, len(initial_factors)):
+            product = initial_factors[i] * initial_factors[j]
+            if product not in possible_products:
+                possible_products.append(product)
+
+    palindrome_products = sorted([n for n in possible_products if list(str(n))[::-1] == list(str(n))])
+    largest = palindrome_products[-1]
+    factors = []
+
+    for x in range(1, largest + 1):
+        for y in range(1, largest + 1):
+            temp = []
+            if x * y == largest:
+                temp.append(x)
+                temp.append(y)            
+                if sorted(temp) not in factors:
+                    factors.append(temp)
+
+    return (largest, factors[-1]) if len(factors) > 2 else (largest, factors)
+
+
+def smallest(min_factor, max_factor):
+    """Given a range of numbers, find the smallest palindromes which
+    are products of two numbers within that range.
+
+    :param min_factor: int with a default value of 0
+    :param max_factor: int
+    :return: tuple of (palindrome, iterable).
+    Iterable should contain both factors of the palindrome in an arbitrary order.
+    """
+
+    # if the max_factor is less than the min_factor
+    if max_factor < min_factor: raise ValueError("min must be <= max")
+    
+    initial_factors = [n for n in range(min_factor, max_factor + 1)]
+    possible_products = []
+    
+    for i in range(0, len(initial_factors)):
+        for j in range(0, len(initial_factors)):
+            product = initial_factors[i] * initial_factors[j]
+            if product not in possible_products:
+                possible_products.append(product)
+   
+    palindrome_products = sorted([n for n in possible_products if list(str(n))[::-1] == list(str(n))])
+    smallest = palindrome_products[0]
+    largest = palindrome_products[-1]
+    factors = []
+
+    for x in range(1, largest + 1):
+        for y in range(1, largest + 1):
+            temp = []
+            if x * y == smallest:
+                temp.append(x)
+                temp.append(y)            
+                if sorted(temp) not in factors:
+                    factors.append(temp)
+
+    return (smallest, factors[-1]) if len(factors) > 2 else (smallest, factors)
+
+
+if __name__ == '__main__':
+    
+    print(largest(1, 9))                                    # (9, [[1, 9], [3, 3]])
+    print(largest(10, 99))                                  # (9009, (91, 99))
+    print(smallest(10, 99))                                 # (121, (11, 11))    
+    print(smallest(min_factor=1, max_factor=9))             #1 [[1, 1]])
+    print(largest(min_factor=1, max_factor=9))              #9 [[1, 9], [3, 3]])
+    print(smallest(min_factor=10, max_factor=99))           #121 [[11, 11]])
+    print(largest(min_factor=10, max_factor=99))            #9009 [[91, 99]])
+    print(smallest(min_factor=100, max_factor=999))         #10201 [[101, 101]])
+    print(largest(min_factor=100, max_factor=999))          #906609 [[913, 993]])
+    print(smallest(min_factor=1000, max_factor=9999))       #1002001 [[1001, 1001]])
+    print(largest(min_factor=1000, max_factor=9999))        #99000099 [[9901, 9999]])
+    print(smallest(min_factor=1002, max_factor=1003))       #None(value) 
+    print(largest(min_factor=15, max_factor=15))            #None(value) 
+    print(smallest(min_factor=10000, max_factor=1))         #ValueError
+ 
