@@ -49,3 +49,4 @@ Solutions to programming exercises on exercism.org written in Python.
 | 41 | [Reverse String](https://exercism.org/tracks/python/exercises/reverse-string) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Reverse%20String) | Strings |
 | 42 | [Leap](https://exercism.org/tracks/python/exercises/leap) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Leap) | Bools |
 | 43 | [Flatten Array](https://exercism.org/tracks/python/exercises/flatten-array) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Flatten%20Array) | Lists |
+| 43 | [Rna Transcription](https://exercism.org/tracks/python/exercises/rna-transcription) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Rna%20Transcription) | String Methods |
