@@ -1,0 +1,10 @@
+# https://exercism.org/tracks/python/exercises/rna-transcription/solutions/ARS-Technica
+
+def to_rna(dna_strand):
+    rna = {'G': 'C', 'C': 'G', 'T': 'A', 'A': 'U'}
+    return ''.join([rna[i] for i in list(dna_strand)])
+
+
+if __name__ == '__main__':
+    print(to_rna("G"))                      #"C"
+    print(to_rna("ACGTGGTCTTAA"))           #"UGCACCAGAAUU"
