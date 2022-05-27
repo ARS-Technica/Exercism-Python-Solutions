@@ -1,0 +1,18 @@
+# https://exercism.org/tracks/python/exercises/palindrome-products/solutions/ExercismGhost
+
+from operator import itemgetter
+
+def largest_palindrome(max_factor, min_factor=0):
+    return max(generate_palindromes(max_factor, min_factor), key=itemgetter(0))
+
+def smallest_palindrome(max_factor, min_factor=0):
+    return next(generate_palindromes(max_factor, min_factor))
+
+def generate_palindromes(max_factor, min_factor):
+    products = ((m * n, (m, n))
+                for m in range(min_factor, max_factor + 1)
+                for n in range(min_factor, m + 1))
+
+    return ((product, factors)
+            for product, factors in products
+            if str(product) == str(product)[::-1])
