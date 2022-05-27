@@ -48,3 +48,22 @@ def smallest(min_factor, max_factor):
                 return res, factors
 
     return (None, [])
+
+
+if __name__ == '__main__':
+    
+    print(largest(1, 9))                    # (9, [[1, 9], [3, 3]])
+    print(largest(10, 99))                  # (9009, (91, 99))
+    print(smallest(10, 99))                 # (121, (11, 11))    
+    
+    print(smallest(min_factor=1, max_factor=9))             #1 [[1, 1]])
+    print(largest(min_factor=1, max_factor=9))              #9 [[1, 9], [3, 3]])
+    print(smallest(min_factor=10, max_factor=99))           #121 [[11, 11]])
+    print(largest(min_factor=10, max_factor=99))            #9009 [[91, 99]])
+    print(smallest(min_factor=100, max_factor=999))         #10201 [[101, 101]])
+    print(largest(min_factor=100, max_factor=999))          #906609 [[913, 993]])
+    print(smallest(min_factor=1000, max_factor=9999))       #1002001 [[1001, 1001]])
+    print(largest(min_factor=1000, max_factor=9999))        #99000099 [[9901, 9999]])
+    print(smallest(min_factor=1002, max_factor=1003))       #None(value) 
+    print(largest(min_factor=15, max_factor=15))            #None(value) 
+    print(smallest(min_factor=10000, max_factor=1))         #ValueError
