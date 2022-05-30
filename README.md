@@ -52,3 +52,4 @@ Solutions to programming exercises on exercism.org written in Python.
 | 43 | [Rna Transcription](https://exercism.org/tracks/python/exercises/rna-transcription) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Rna%20Transcription) | String Methods |
 | 44 | [Sum Of Multiples](https://exercism.org/tracks/python/exercises/sum-of-multiples) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Sum%20Of%20Multiples) | Sets |
 | 45 | [Saddle Points](https://exercism.org/tracks/python/exercises/saddle-points) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Saddle%20Points) | Loops |
+| 46 | [Etl](https://exercism.org/tracks/python/exercises/etl) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Etl) | Dictionaries |
