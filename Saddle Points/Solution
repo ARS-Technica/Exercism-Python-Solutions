@@ -1,0 +1,47 @@
+# https://exercism.org/tracks/python/exercises/saddle-points/solutions/ARS-Technica
+
+def saddle_points(matrix):
+    # if the matrix is empty    
+    if not matrix:
+        return []
+    # if the matrix is irregular
+    if len(set([len(row) for row in matrix] )) != 1:
+        raise ValueError("irregular matrix")
+
+    rows = {}
+
+    for row in range(len(matrix)):
+        potential_max = max(matrix[row])
+        rows[row] = []
+
+        for idx, num in enumerate(matrix[row]):
+            if num == potential_max:
+                rows[row].append([row, idx])
+
+    columns = []
+
+    for idx in range(len(matrix[0])):
+        column = []
+        for row in range(len(matrix)):
+            column.append(matrix[row][idx])
+        columns.append(column)
+
+    result = []
+
+    for key, values in rows.items():
+        if(isinstance(values, list)):
+            for value in values:
+                if matrix[value[0]][value[1]] == min(columns[value[1]]):
+                    temp = {"row": value[0] + 1, "column":value[1] + 1} 
+                    result.append(temp)
+
+    return result
+
+
+if __name__ == '__main__':
+    print(saddle_points([[9, 8, 7], [5, 3, 2], [6, 6, 7]]))                 # [{"row": 2, "column": 1}]
+    print(saddle_points([[1, 2, 3], [3, 1, 2], [2, 3, 1]]))                 # []  
+    print(saddle_points([[4, 5, 4], [3, 5, 5], [1, 5, 4]]))                 # [{"row": 1, "column": 2}, {"row": 2, "column": 2}, {"row": 3, "column": 2},]
+    print(saddle_points([[3, 2, 1], [0, 1], [2, 1, 0]]))                    # "irregular matrix"
+    print(saddle_points([]))                                                # "irregular matrix"
+
