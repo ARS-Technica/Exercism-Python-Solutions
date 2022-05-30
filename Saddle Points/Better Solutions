@@ -1,0 +1,22 @@
+# https://exercism.org/tracks/python/exercises/saddle-points/solutions/yingtao
+
+def saddle_points(matrix):
+    if not all([len(row) == len(matrix[0]) for row in matrix]):
+        raise ValueError('irregular matrix')
+
+    row_max = [max(row) for row in matrix]
+    col_min = [min(col) for col in zip(*matrix)]
+
+    result = []
+
+    for m, row in enumerate(matrix):
+        for n, value in enumerate(row):
+            if value == row_max[m] and value == col_min[n]:
+                result.append({'row': m + 1, 'column': n + 1})
+
+    return result
+
+
+
+
+  
