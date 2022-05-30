@@ -2,7 +2,7 @@
 
 def transform(legacy_data):
     data = {}
-    
+
     for key, values in legacy_data.items():
         if(isinstance(values, list)):
             for value in values:
@@ -12,4 +12,21 @@ def transform(legacy_data):
 
 #%%
 
+def transform(legacy_data):
+    return {value.lower() : key for key, values in legacy_data.items() if(isinstance(values, list)) for value in values}
 
+if __name__ == '__main__':
+    print(transform(legacy_data = {1: ["A"]}))                                  # data = {"a": 1}
+
+    print(transform(legacy_data = {1: ["A", "E", "I", "O", "U"]}))              # data = {"a": 1, "e": 1, "i": 1, "o": 1, "u": 1}
+
+    print(transform(legacy_data = {1: ["A", "E"], 2: ["D", "G"]}))              # data = {"a": 1, "d": 2, "e": 1, "g": 2}
+
+    print(transform(legacy_data = {
+            1: ["A", "E", "I", "O", "U", "L", "N", "R", "S", "T"],
+            2: ["D", "G"],
+            3: ["B", "C", "M", "P"],
+            4: ["F", "H", "V", "W", "Y"],
+            5: ["K"],
+            8: ["J", "X"],
+            10: ["Q", "Z"],})) 
