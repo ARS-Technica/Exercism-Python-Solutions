@@ -51,3 +51,4 @@ Solutions to programming exercises on exercism.org written in Python.
 | 43 | [Flatten Array](https://exercism.org/tracks/python/exercises/flatten-array) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Flatten%20Array) | Lists |
 | 43 | [Rna Transcription](https://exercism.org/tracks/python/exercises/rna-transcription) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Rna%20Transcription) | String Methods |
 | 44 | [Sum Of Multiples](https://exercism.org/tracks/python/exercises/sum-of-multiples) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Sum%20Of%20Multiples) | Sets |
+| 45 | [Saddle Points](https://exercism.org/tracks/python/exercises/saddle-points) | [Python](https://exercism.org/tracks/python/exercises/saddle-points/solutions/ARS-Technica) | Loops |
