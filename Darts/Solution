@@ -1,0 +1,9 @@
+# https://exercism.org/tracks/python/exercises/darts/solutions/ARS-Technica
+
+def score(x, y):
+    radius = (abs(x)**2 + abs(y)**2)**.5 
+    
+    if 0 <= radius <= 1: return 10
+    elif 1 < radius <= 5: return 5
+    elif 5 < radius <= 10: return 1
+    else: return 0
