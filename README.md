@@ -54,3 +54,4 @@ Solutions to programming exercises on exercism.org written in Python.
 | 45 | [Saddle Points](https://exercism.org/tracks/python/exercises/saddle-points) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Saddle%20Points) | Loops |
 | 46 | [Etl](https://exercism.org/tracks/python/exercises/etl) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Etl) | Dictionaries |
 | 47 | [Secret Handshake](https://exercism.org/tracks/python/exercises/secret-handshake) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Secret%20Handshake) | Lists |
+| 48 | [Darts](https://exercism.org/tracks/python/exercises/darts) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Darts) | Comparisons |
