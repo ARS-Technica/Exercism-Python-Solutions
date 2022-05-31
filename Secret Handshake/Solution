@@ -1,0 +1,18 @@
+# https://exercism.org/tracks/python/exercises/secret-handshake/solutions/ARS-Technica
+
+def commands(binary_str):
+    binary = [int(n) for n in list(binary_str)] 
+    binary_code = {0: 'rev', 1: 'jump', 2: 'close your eyes', 3: 'double blink', 4: 'wink',}
+    result = []
+
+    for position, digit in enumerate(binary):
+        if  digit == 1: result.append(binary_code[position])
+
+    if result:
+        if result[0] == 'rev':
+            result.remove('rev')
+        else:
+            result.reverse()
+        return result
+    else:
+        return []
