@@ -1,0 +1,8 @@
+
+# https://exercism.org/tracks/python/exercises/secret-handshake/solutions/Tanni
+
+L = ['wink', 'double blink', 'close your eyes', 'jump']
+
+def commands(binary_str):
+    return [L[i] for i, value in enumerate(binary_str[:-5:-1]) if value == '1'][::-1 if binary_str[-5] == '1' else None]
+
