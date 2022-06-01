@@ -19,3 +19,11 @@ if __name__ == '__main__':
     print(value(["green", "brown", "orange"]))                          # 51
     print(value(["black", "brown"]))                                    # 1
 
+
+#%%
+
+
+def value(colors): 
+    resistors = ["black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white",] 
+    return int(''.join([str(resistors.index(idx)) for idx in colors][:2:]))
+
