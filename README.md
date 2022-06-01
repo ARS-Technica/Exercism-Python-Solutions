@@ -55,4 +55,5 @@ Solutions to programming exercises on exercism.org written in Python.
 | 46 | [Etl](https://exercism.org/tracks/python/exercises/etl) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Etl) | Dictionaries |
 | 47 | [Secret Handshake](https://exercism.org/tracks/python/exercises/secret-handshake) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Secret%20Handshake) | Lists |
 | 48 | [Darts](https://exercism.org/tracks/python/exercises/darts) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Darts) | Comparisons |
-| 49 | [Resistor Color Duo](https://exercism.org/tracks/python/exercises/darts) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Resistor%20Color%20Duo) | Lists |
+| 49 | [Resistor Color](https://exercism.org/tracks/python/exercises/resistor-color) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Resistor%20Color) | Lists |
+| 50 | [Resistor Color Duo](https://exercism.org/tracks/python/exercises/darts) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Resistor%20Color%20Duo) | Lists |
