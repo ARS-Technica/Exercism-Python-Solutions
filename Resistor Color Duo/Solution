@@ -1,0 +1,21 @@
+# https://exercism.org/tracks/python/exercises/resistor-color-duo/solutions/ARS-Technica
+
+def value(colors): 
+    resistors = ["black", "brown", "red", "orange", "yellow", "green", "blue", "violet", "grey", "white",]
+    result = ''
+
+    for idx in colors:
+        result += str(resistors.index(idx)) 
+
+    return int(result[:2:])
+
+
+if __name__ == '__main__':
+    print(value(["brown", "black"]))                                    # 10
+    print(value(["blue", "grey"]))                                      # 68
+    print(value(["yellow", "violet"]))                                  # 47
+    print(value(["white", "red"]))                                      # 92
+    print(value(["orange", "orange"]))                                  # 33
+    print(value(["green", "brown", "orange"]))                          # 51
+    print(value(["black", "brown"]))                                    # 1
+
