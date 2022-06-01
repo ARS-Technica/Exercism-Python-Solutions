@@ -1,0 +1,6 @@
+# https://exercism.org/tracks/python/exercises/resistor-color-duo/solutions/zachbloom
+
+color_list = ['black','brown','red','orange','yellow','green','blue','violet','grey','white']
+
+def value(colors):
+	return 10*color_list.index(colors[0])+color_list.index(colors[1])
