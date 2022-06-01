@@ -57,3 +57,4 @@ Solutions to programming exercises on exercism.org written in Python.
 | 48 | [Darts](https://exercism.org/tracks/python/exercises/darts) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Darts) | Comparisons |
 | 49 | [Resistor Color](https://exercism.org/tracks/python/exercises/resistor-color) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Resistor%20Color) | Lists |
 | 50 | [Resistor Color Duo](https://exercism.org/tracks/python/exercises/darts) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Resistor%20Color%20Duo) | Lists |
+| 51 | [Space Age](https://exercism.org/tracks/python/exercises/space-age) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Space%20Age) | Dictionary |
