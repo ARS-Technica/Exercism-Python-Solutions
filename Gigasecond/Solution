@@ -1,0 +1,8 @@
+# https://exercism.org/tracks/python/exercises/gigasecond/solutions/ARS-Technica
+
+from datetime import timedelta
+
+gigasecond = 1_000_000_000
+
+def add(moment):
+    return moment + timedelta(seconds = gigasecond)
