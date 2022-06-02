@@ -1,0 +1,45 @@
+# https://exercism.org/tracks/python/exercises/yacht/solutions/ARS-Technica
+
+def ONES(dice):
+    return dice.count(1) * 1
+    
+def TWOS(dice):
+    return dice.count(2) * 2
+
+def THREES(dice):
+    return dice.count(3) * 3
+
+def FOURS(dice):
+    return dice.count(4) * 4
+
+def FIVES(dice):
+    return dice.count(5) * 5
+
+def SIXES(dice):
+    return dice.count(6) * 6
+
+def FULL_HOUSE(dice):
+    # Three of one number and two of another
+    three = dice.count(max(set(dice), key = dice.count))
+    two = dice.count(min(set(dice), key = dice.count))
+    return sum(dice) if three == 3 and two == 2 else 0
+
+def FOUR_OF_A_KIND(dice):
+    return (max(set(dice), key=dice.count) * 4) * (dice.count(max(set(dice), key=dice.count)) >= 4)
+
+def LITTLE_STRAIGHT(dice):
+    # 1-2-3-4-5
+    return 30 if dice == [1,2,3,4,5] else 0
+
+def BIG_STRAIGHT(dice):
+    # 2-3-4-5-6
+    return 30 if dice == [2,3,4,5,6] else 0
+
+def CHOICE(dice):
+    return sum(dice)
+
+def YACHT(dice):
+    return 50 if len(set(dice)) == 1 else 0
+
+def score(dice, category):
+    return category(sorted(dice))
