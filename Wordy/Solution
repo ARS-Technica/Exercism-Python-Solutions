@@ -1,0 +1,36 @@
+# https://exercism.org/tracks/python/exercises/wordy/solutions/ARS-Technica
+
+def answer(question):
+    nums, operators = 0, 0
+    order_of_operations = {'multiplied': '*', 'divided': '/', 'plus': '+', 'minus': '-',}
+
+    question = question.replace('What is ', '').replace(' by', '').replace('?', '').replace('What is', '')
+    question = question.split(' ')
+
+
+    for idx, item in enumerate(question):
+        if question[idx] == '': raise ValueError("syntax error")
+        try:
+            question[idx] = order_of_operations[item]
+            operators += 1
+        except:
+            try:
+                int(item)
+                str(item)
+                nums += 1
+            except:
+                raise ValueError("unknown operation")
+
+    if nums != operators + 1: raise ValueError("syntax error")
+
+    if len(question) == 1: return int(question[0])
+    else:
+        try:
+            # The equivalent of parentheses
+            if nums > 2:               
+                question.insert(3, (str(eval(' '.join(question[0:3])))))
+                return int(eval(' '.join(question[3::])))
+            else:
+                return int(eval(' '.join(question)))
+        except:
+            raise ValueError("syntax error")
