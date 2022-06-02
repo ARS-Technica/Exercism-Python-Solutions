@@ -1,0 +1,48 @@
+# Failed one of 25 tests due order of presidence "What is -3 plus 7 multiplied by -2?"
+
+
+def answer(question):
+    nums, operators = 0, 0
+    order_of_operations = {'multiplied': '*', 'divided': '/', 'plus': '+', 'minus': '-',}
+
+    question = question.replace('What is ', '').replace(' by', '').replace('?', '').replace('What is', '')
+    question = question.split(' ')
+
+
+    for idx, item in enumerate(question):
+        if question[idx] == '': raise ValueError("syntax error")
+        try:
+            question[idx] = order_of_operations[item]
+            operators += 1
+        except:
+            try:
+                int(item)
+                str(item)
+                nums += 1
+            except:
+                raise ValueError("unknown operation")
+
+    if nums != operators + 1: raise ValueError("syntax error")
+
+    if len(question) == 1: return int(question[0])
+    else:
+        try: return int(eval(' '.join(question)))
+        except: raise ValueError("syntax error")
+
+
+if __name__ == '__main__':
+    print(answer('What is 5?'))                                                 # 5
+    print(answer('What is 5 plus 13?'))                                         # 18
+    print(answer('What is 7 minus 5?'))                                         # 2
+    print(answer('What is 6 multiplied by 4?'))                                 # 24
+    print(answer('What is 25 divided by 5?'))                                   # 5
+    print(answer('What is 5 plus 13 plus 6?'))                                  # 24
+    print(answer('What is 3 plus 2 multiplied by 3?'))                          # 15
+    print(answer("What is 2 multiplied by -2 multiplied by 3?"))                # -12
+    #print(answer("What is?"))                                                  # "syntax error"
+    #print(answer("What is 1 plus plus 2?"))                                     # "syntax error"
+    print(answer("What is -3 plus 7 multiplied by -2?"))                       # -8
+
+
+# Failed one of 25 tests due order of presidence "What is -3 plus 7 multiplied by -2?"
+
