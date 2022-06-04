@@ -61,3 +61,4 @@ Solutions to programming exercises on exercism.org written in Python.
 | 51 | [Yacht](https://exercism.org/tracks/python/exercises/yacht) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Yacht) | Bools |
 | 52 | [Wordy](https://exercism.org/tracks/python/exercises/wordy) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Wordy) | String Methods |
 | 53 | [House](https://exercism.org/tracks/python/exercises/house) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/House) | Loops |
+| 54 | [Rotational Cipher](https://exercism.org/tracks/python/exercises/rotational-cipher) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Rotational%20Cipher) | Strings |
