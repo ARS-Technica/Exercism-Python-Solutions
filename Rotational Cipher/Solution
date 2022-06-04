@@ -1,0 +1,32 @@
+# 
+
+
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+            'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+
+def rotate(text, key):
+    cipher = alphabet[key:] + alphabet[0 : key]
+    result = []
+
+    for i in text:
+        if i.isalpha():
+            if i.isupper():
+                result.append(cipher[alphabet.index(i.lower())].upper())
+            else:
+                result.append(cipher[alphabet.index(i)])
+        else:
+            result.append(i)
+
+    return ''.join(result)
+
+
+if __name__ == "__main__":
+    print(rotate('omg', 5))     # trl
+    print(rotate('c', 0))       # c
+    print(rotate('Cool', 26))   # Cool
+    print(rotate('The quick brown fox jumps over the lazy dog.', 13))    # Gur dhvpx oebja sbk whzcf bire gur ynml qbt.
+    print(rotate('Gur dhvpx oebja sbk whzcf bire gur ynml qbt.', 13))    # The quick brown fox jumps over the lazy dog.
+
+
+#%%
