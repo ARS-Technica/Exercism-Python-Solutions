@@ -1,0 +1,28 @@
+# https://exercism.org/tracks/python/exercises/rotational-cipher/solutions/daeldir
+
+def rotate(s, key):
+    fro = "abcdefghijklmnopqrstuvwxyz"
+    to = fro[key:] + fro[:key]
+    fro += fro.upper(); to += to.upper()
+    return s.translate(str.maketrans(fro, to))
+
+#%%
+
+# https://exercism.org/tracks/python/exercises/rotational-cipher/solutions/aenygma
+
+chars = "abcdefghijklmnopqrstuvwxyz"
+
+def rotate(text, key):
+    newchars = chars[key:] + chars[:key]
+    trans = str.maketrans(chars + chars.upper(), newchars + newchars.upper())
+    return text.translate(trans)
+
+#%%
+
+
+
+
+
+
+
+
