@@ -30,3 +30,15 @@ if __name__ == "__main__":
 
 
 #%%
+
+
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+            'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+
+def rotate(text, key):
+    cipher = alphabet[key:] + alphabet[0 : key]
+    result = [cipher[alphabet.index(i.lower())] if i.isalpha() else i for i in text]
+    capped = [result[i].upper() if char.isupper() else result[i] for i, char in enumerate(text)] 
+
+    return ''.join(capped)
