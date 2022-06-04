@@ -60,3 +60,4 @@ Solutions to programming exercises on exercism.org written in Python.
 | 51 | [Space Age](https://exercism.org/tracks/python/exercises/space-age) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Space%20Age) | Dictionary |
 | 51 | [Yacht](https://exercism.org/tracks/python/exercises/yacht) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Yacht) | Bools |
 | 52 | [Wordy](https://exercism.org/tracks/python/exercises/wordy) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Wordy) | String Methods |
+| 53 | [House](https://exercism.org/tracks/python/exercises/house) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/House) | Loops |
