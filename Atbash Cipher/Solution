@@ -9,6 +9,68 @@ def encode(plain_text):
     cipher = alphabet[:: -1]
     result = []
 
+    plain_text.replace(' ', '')
+
+    for i in plain_text:
+        if i.isalpha():
+            result.append(cipher[alphabet.index(i.lower())])
+        elif i.isnumeric():
+            result.append(i)
+        else:
+            pass
+
+
+    i = 5
+    
+    while i < len(result):
+        result.insert(i,' ')
+        i = i + 5 + 1
+
+
+    return ''.join(result)
+
+
+def decode(ciphered_text):
+    cipher = alphabet[:: -1]
+    result = [alphabet[cipher.index(i.lower())] if i.isalpha() else i for i in ciphered_text]
+
+
+
+    return ''.join(result).replace(' ', '')
+
+
+if __name__ == "__main__":
+    '''
+    print(encode('test'))                                               #gvhg
+    print(encode('x123 yes'))                                           #c123b vh 
+    print(decode('gvhg'))                                               #test
+    print(decode('gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt'))          #thequickbrownfoxjumpsoverthelazydog
+    print(decode("vc vix    r hn"))                                     # "exercism"    
+    print(decode("gvhgr mt123 gvhgr mt"))                               # testing123testing 
+    '''    
+
+    print(encode("Testing,1 2 3, testing."))                            # gvhgr mt123 gvhgr mt
+    print(encode("mindblowingly"))                                      # nrmwy oldrm tob
+
+    '''
+    print(encode("O M G"))                                               #lnt  
+    print(encode("mindblowingly"))                                       #"nrmwy oldrm tob"
+    print(encode("Testing,1 2 3, testing."))                             #"gvhgr mt123 gvhgr mt"
+    '''
+
+# Works
+
+#%% 
+
+
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+            'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+
+def encode(plain_text):
+    cipher = alphabet[:: -1]
+    result = []
+
     for i in plain_text:
         if i.isalpha():
             result.append(cipher[alphabet.index(i.lower())])
