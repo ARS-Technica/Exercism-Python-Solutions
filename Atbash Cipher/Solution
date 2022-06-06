@@ -1,0 +1,42 @@
+# https://exercism.org/tracks/python/exercises/atbash-cipher/solutions/ARS-Technica
+
+
+alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
+            'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+
+def encode(plain_text):
+    cipher = alphabet[:: -1]
+    result = []
+
+    for i in plain_text:
+        if i.isalpha():
+            result.append(cipher[alphabet.index(i.lower())])
+        elif i.isnumeric():
+            result.append(i)
+        else:
+            pass
+
+    result = list(''.join(i + ' ' * (n % 5 == 4) for n, i in enumerate(result)))
+    return ''.join(result).strip()
+
+
+def decode(ciphered_text):
+    cipher = alphabet[:: -1]
+    result = [alphabet[cipher.index(i.lower())] if i.isalpha() else i for i in ciphered_text]
+    return ''.join(result).replace(' ', '')
+
+
+if __name__ == "__main__":
+    print(encode('test'))                                               #gvhg
+    print(encode('x123 yes'))                                           #c123b vh 
+    print(encode("O M G"))                                               #lnt  
+    print(encode("mindblowingly"))                                       #"nrmwy oldrm tob"
+    print(encode("Testing,1 2 3, testing."))                             #"gvhgr mt123 gvhgr mt"
+    print(encode("Testing,1 2 3, testing."))                            # gvhgr mt123 gvhgr mt
+    print(encode("mindblowingly"))                                      # nrmwy oldrm tob
+    
+    print(decode('gvhg'))                                               #test
+    print(decode('gsvjf rxpyi ldmul cqfnk hlevi gsvoz abwlt'))          #thequickbrownfoxjumpsoverthelazydog
+    print(decode("vc vix    r hn"))                                     # "exercism"    
+    print(decode("gvhgr mt123 gvhgr mt"))                               # testing123testing 
