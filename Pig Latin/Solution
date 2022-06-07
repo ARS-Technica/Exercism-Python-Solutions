@@ -1,0 +1,30 @@
+# 
+
+def translate(text):
+    sentence = [ list(word) for word in text.split()]
+
+    consonant_clusters = ['sm', 'sn', 'st', 'sw', 'sk', 'sl', 'sp', 'sf', 'th',
+                          'dw', 'tw', 'dr', 'tr', 'kw', 'kr', 'kl', 'pr', 'fr',
+                          'br', 'gr', 'pl', 'fl', 'bl', 'gl', 'sh', 'ch']   
+    #sh > shr, th > thr, th > thw, 
+    #If a word starts with a consonant sound followed by "qu", move it to the end of the word
+    vowel_sounds = ['a', 'e', 'i', 'o', 'u']
+    #"xr" and "yt"
+    
+    for word in sentence: 
+        #print(word)
+        pass
+
+
+if __name__ == "__main__":
+    print(translate("apple"))                                                       # "appleay"
+    print(translate("ear"))                                                         # "earay"
+    print(translate("igloo"))                                                       # "iglooay"
+    print(translate("object"))                                                      # "objectay"
+    print(translate("pig"))                                                         # "igpay"
+    print(translate("koala"))                                                       # "oalakay"
+    print(translate("square"))                                                      # "aresquay"
+    print(translate("therapy"))                                                     # "erapythay"
+    print(translate("thrush"))                                                      # "ushthray"    
+    print(translate("school"))                                                      # "oolschay" 
+    print(translate("quick fast run"))                                              # "ickquay astfay unray"
