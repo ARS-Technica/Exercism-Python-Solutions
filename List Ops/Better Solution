@@ -1,0 +1,33 @@
+# Refactored into list comprehensions
+
+def append(list1, list2):
+    return [*list1, *list2]
+
+
+def concat(lists):
+    return [item for lst in lists for item in lst]
+
+
+def filter(function, list):
+    return [item for item in list if function(item)]
+
+
+def length(list):
+    return sum([1 for item in list])
+
+
+def map(function, list):
+    return [function(item) for item in list]
+
+
+def foldl(function, list, initial):
+    return initial if list == [] else foldl(function, list[1:], function(initial, list[0]))
+
+
+def foldr(function, list, initial):
+    return initial if list == [] else function(list[0], foldr(function, list[1:], initial))
+
+
+def reverse(list):
+    #return reverse(list)
+    return list[::-1]
