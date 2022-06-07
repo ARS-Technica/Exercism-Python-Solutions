@@ -1,0 +1,57 @@
+# https://exercism.org/tracks/python/exercises/list-ops/solutions/ARS-Technica
+
+def append(list1, list2):
+    return list1 + list2
+
+
+def concat(lists):
+    result = []
+
+    for item in lists:
+        result.extend(item)
+    return result
+
+
+def filter(function, list):
+    result = []
+
+    for item in list:
+        if function(item):
+            result.append(item)
+    return result
+
+
+def length(list):
+    result = 0
+
+    for item in list:
+        result += 1
+    return result
+
+
+def map(function, list):
+    result = []
+
+    for item in list:
+        result.append(function(item))
+    return result
+
+
+def foldl(function, list, initial):
+    for item in list:
+        initial = function(initial, item)
+    return initial
+
+
+def foldr(function, list, initial):
+    for item in reverse(list):
+        initial = function(item, initial)
+    return initial
+
+
+def reverse(list):
+    result = []
+
+    for item in range(len(list)):
+        result.append(list.pop())
+    return result
