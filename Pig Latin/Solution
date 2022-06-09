@@ -1,22 +1,106 @@
 # 
 
+
 def translate(text):
-    sentence = [ list(word) for word in text.split()]
+    sentence = [list(word) for word in text.split()]
 
     consonant_clusters = ['sm', 'sn', 'st', 'sw', 'sk', 'sl', 'sp', 'sf', 'th',
                           'dw', 'tw', 'dr', 'tr', 'kw', 'kr', 'kl', 'pr', 'fr',
-                          'br', 'gr', 'pl', 'fl', 'bl', 'gl', 'sh', 'ch']   
-    #sh > shr, th > thr, th > thw, 
-    #If a word starts with a consonant sound followed by "qu", move it to the end of the word
-    vowel_sounds = ['a', 'e', 'i', 'o', 'u']
-    #"xr" and "yt"
-    
-    for word in sentence: 
-        #print(word)
-        pass
+                          'br', 'gr', 'pl', 'fl', 'bl', 'gl', 'sh', 'ch', 'qu',
+                          'sh', 'sc', 'rh',]   
 
+    vowel_sounds = ['a', 'e', 'i', 'o', 'u']
+
+
+    for word in sentence: 
+        if word[0] in vowel_sounds:
+            word.append('ay')
+
+        if len(word) == 2:
+            if word[1] == 'y':
+                word.append(word.pop(0))
+                word.append('ay') 
+                    
+        elif word[0] not in vowel_sounds:
+            if word[0] == 'x':
+                if word[1] == 'r':
+                    word.append('ay')
+                else:
+                    word.append(word.pop(0))
+                    word.append('ay')
+            elif word[0] == 'y':
+                if word[1] == 't':
+                    word.append('ay')
+                else:
+                    word.append(word.pop(0))
+                    word.append('ay')
+            
+            else:
+                if word[0] + word[1] in consonant_clusters:
+                    if word[0] == 's' and word[1] == 'c':
+                        if word[2] == 'h':
+                            word.append(word.pop(0))
+                            word.append(word.pop(0))
+                            word.append(word.pop(0))
+                            word.append('ay') 
+                        else:
+                            word.append(word.pop(0))
+                            word.append(word.pop(0))
+                            word.append('ay')                             
+                    elif word[0] == 's' and word[1] == 'h':
+                        if word[2] == 'r':
+                            word.append(word.pop(0))
+                            word.append(word.pop(0))
+                            word.append(word.pop(0))
+                            word.append('ay') 
+                        else:
+                            word.append(word.pop(0))
+                            word.append(word.pop(0))
+                            word.append('ay')  
+                    elif word[0] == 't' and word[1] == 'h':
+                        if word[2] == 'r':
+                            word.append(word.pop(0))
+                            word.append(word.pop(0))
+                            word.append(word.pop(0))
+                            word.append('ay')      
+                        else:
+                            word.append(word.pop(0))
+                            word.append(word.pop(0))
+                            word.append('ay')  
+                    elif word[0] == 't' and word[1] == 'h':
+                        if word[2] == 'w':
+                            word.append(word.pop(0))
+                            word.append(word.pop(0))
+                            word.append(word.pop(0))
+                            word.append('ay')   
+                        else:
+                            word.append(word.pop(0))
+                            word.append(word.pop(0))
+                            word.append('ay')  
+                    else:
+                        word.append(word.pop(0))
+                        word.append(word.pop(0))
+                        word.append('ay')
+                else:
+                    if word[1] == 'q' and word[2] == 'u':
+                        word.append(word.pop(0))
+                        word.append(word.pop(0))
+                        word.append(word.pop(0))
+                        word.append('ay')                        
+                    else:
+                        word.append(word.pop(0))
+                        word.append('ay')
+
+    return ' '.join([''.join(word) for word in sentence])
+    
 
 if __name__ == "__main__":
+    print(translate("rhythm"))                                                      # "ythmrhay"
+    print(translate("school"))                                                      # "oolschay"
+    print(translate("my"))                                                          # "ymay"
+    print(translate("therapy"))                                                     # "erapythay"
+    print(translate("thrush"))                                                      # "ushthray"
+    print(translate("school"))                                                      # "oolschay" 
     print(translate("apple"))                                                       # "appleay"
     print(translate("ear"))                                                         # "earay"
     print(translate("igloo"))                                                       # "iglooay"
@@ -25,6 +109,4 @@ if __name__ == "__main__":
     print(translate("koala"))                                                       # "oalakay"
     print(translate("square"))                                                      # "aresquay"
     print(translate("therapy"))                                                     # "erapythay"
-    print(translate("thrush"))                                                      # "ushthray"    
-    print(translate("school"))                                                      # "oolschay" 
     print(translate("quick fast run"))                                              # "ickquay astfay unray"
