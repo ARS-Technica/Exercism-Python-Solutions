@@ -1,0 +1,12 @@
+# https://exercism.org/tracks/python/exercises/roman-numerals/solutions/daros21
+
+def roman(number: int) -> str:
+    roman = {
+        0: ["", "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"],
+        1: ["", "X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"],
+        2: ["", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"],
+        3: ["", "M", "MM", "MMM"]
+    }
+    
+    return "".join(reversed([roman[idx][int(n)]
+                             for idx, n in enumerate(list(reversed(str(number))))]))
