@@ -1,0 +1,35 @@
+# 
+
+def roman(number):
+    number_as_str = str(number)
+    roman_number: str = ''
+
+    for index, order in enumerate(range(len(number_as_str), 0, -1)):
+        digit = int(number_as_str[index])
+        if digit == 0:
+            continue
+        if order == 4:
+            roman_number += 'M' * digit
+        else:
+            roman_number += roman_number_for_order_and_digit(order, digit)
+
+    return roman_number
+    
+def roman_number_for_order_and_digit(order, digit):
+    if order == 3:
+        num = ('C', 'D', 'M')
+    elif order == 2:
+        num = ('X', 'L', 'C')
+    else:
+        num = ('I', 'V', 'X')
+
+    if 1 <= digit <= 3:
+        return num[0] * digit
+    elif digit == 4:
+        return num[0] + num[1]
+    elif digit == 5:
+        return num[1]
+    elif 6 <= digit <= 8:
+        return num[1] + num[0] * (digit - 5)
+    elif digit == 9:
+        return num[0] + num[2]
