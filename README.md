@@ -67,3 +67,4 @@ Solutions to programming exercises on exercism.org written in Python.
 | 57 | [List Ops](https://exercism.org/tracks/python/exercises/list-ops) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/List%20Ops) | Lists |
 | 58 | [Pig Latin](https://exercism.org/tracks/python/exercises/pig-latin) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Pig%20Latin) | Strings |
 | 59 | [Prime Factors](https://exercism.org/tracks/python/exercises/prime-factors) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Prime%20Factors) | Loop |
+| 60 | [Nth Prime](https://exercism.org/tracks/python/exercises/nth-prime) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Nth%20Prime) | Loop |
