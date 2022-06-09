@@ -10,3 +10,23 @@ def roman(number: int) -> str:
     
     return "".join(reversed([roman[idx][int(n)]
                              for idx, n in enumerate(list(reversed(str(number))))]))
+
+#%%
+
+# https://exercism.org/tracks/python/exercises/roman-numerals/solutions/brq12
+
+def roman(number):
+    diction = {
+        'ones': ['', 'I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX'],
+        'tens': ['', 'X', 'XX', 'XXX', 'XL', 'L', 'LX', 'LXX', 'LXXX', 'XC'],
+        'hundreds': ['', 'C', 'CC', 'CCC', 'CD', 'D', 'DC', 'DCC', 'DCCC', 'CM'],
+        'thousends': ['', 'M', 'MM', 'MMM']
+    }
+    
+    answer = ''
+
+    for key in diction:
+        number, remainder  = divmod(number, 10)
+        answer = diction.get(key)[remainder] + answer
+
+    return answer
