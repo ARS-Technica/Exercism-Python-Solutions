@@ -1,35 +1,17 @@
-# 
+# https://exercism.org/tracks/python/exercises/roman-numerals/solutions/ARS-Technica
 
 def roman(number):
-    number_as_str = str(number)
-    roman_number: str = ''
+    number = [int(n) for n in reversed(str(number))]
 
-    for index, order in enumerate(range(len(number_as_str), 0, -1)):
-        digit = int(number_as_str[index])
-        if digit == 0:
-            continue
-        if order == 4:
-            roman_number += 'M' * digit
-        else:
-            roman_number += roman_number_for_order_and_digit(order, digit)
+    numerals = [["I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX"],
+                ["X", "XX", "XXX", "XL", "L", "LX", "LXX", "LXXX", "XC"],
+                ["C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"],
+                ["M", "MM", "MMM"]]
 
-    return roman_number
-    
-def roman_number_for_order_and_digit(order, digit):
-    if order == 3:
-        num = ('C', 'D', 'M')
-    elif order == 2:
-        num = ('X', 'L', 'C')
-    else:
-        num = ('I', 'V', 'X')
+    result = []
 
-    if 1 <= digit <= 3:
-        return num[0] * digit
-    elif digit == 4:
-        return num[0] + num[1]
-    elif digit == 5:
-        return num[1]
-    elif 6 <= digit <= 8:
-        return num[1] + num[0] * (digit - 5)
-    elif digit == 9:
-        return num[0] + num[2]
+    for idx, digit in enumerate(number):
+        if digit == 0: continue
+        result.append(numerals[idx][digit-1])
+
+    return ''.join(reversed(result))
