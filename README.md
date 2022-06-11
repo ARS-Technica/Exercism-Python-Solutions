@@ -69,3 +69,4 @@ Solutions to programming exercises on exercism.org written in Python.
 | 59 | [Prime Factors](https://exercism.org/tracks/python/exercises/prime-factors) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Prime%20Factors) | Loop |
 | 60 | [Nth Prime](https://exercism.org/tracks/python/exercises/nth-prime) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Nth%20Prime) | Loop |
 | 61 | [Roman Numerals](https://exercism.org/tracks/python/exercises/roman-numerals) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Roman%20Numerals) | Dictionaries |
+| 62 | [Matching Brackets](https://exercism.org/tracks/python/exercises/matching-brackets) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Matching%20Brackets) | Conditionals |
