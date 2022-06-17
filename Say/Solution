@@ -1,5 +1,3 @@
-
-
 def say(number):
     result = []
 
@@ -53,7 +51,7 @@ def say(number):
                 result.append(pronounce)
 
             else:
-                pronounce = ones[digits[2]] + ' hundred'
+                pronounce = ones[digits[2]] + ' hundred '
 
                 if digits[1] == '0':
                     if digits[0] == '0':
@@ -64,7 +62,11 @@ def say(number):
                     if digits[1] == '1':
                         pronounce += ' ' + teens[digits[1] + digits[0]]
                     else:
-                       pronounce += ' ' + tens[digits[1]] + '-' + ones[digits[0]]
+                        if digits[0] == '0':
+                            pronounce += tens[digits[1]]
+                        else:
+                            pronounce += tens[digits[1]] + '-' + ones[digits[0]]                       
+
 
                 result.append(pronounce)
 
@@ -101,12 +103,13 @@ if __name__ == "__main__":
 
 
     print(say(123))             # "one hundred twenty-three" 
+    print(say(170))             # "one hundred seventy"  
 
 
     print(say(1234))            # "one thousand two hundred thirty-four" 
     print(say(1002345))         # "one million two thousand three hundred forty-five"
 
-    
+
     print(say(100))             # "one hundred" 
     print(say(1000))            # "one thousand" 
     print(say(1000000))         # "one million" 
