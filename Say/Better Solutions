@@ -1,0 +1,25 @@
+# Not Mine
+# https://exercism.org/tracks/python/exercises/say/solutions/ysf
+
+
+one_step = 'zero one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen seventeen nineteen'.split()
+ten_step = 'zero ten twenty thirty forty fifty sixty seventy eighty ninety'.split()
+cases = [  
+    (  20,          1, one_step,          '',  ''),
+    ( 1e2,         10, ten_step,          '', '-'),
+    ( 1e3,        100, one_step,  ' hundred', ' '),
+    ( 1e6,       1000, one_step, ' thousand', ' '),
+    ( 1e9,    1000000, one_step,  ' million', ' '),
+    (1e12, 1000000000, one_step,  ' billion', ' ')    
+]
+
+def say(number):
+    if not (0 <= number < 1e12):
+        raise ValueError("input out of range")
+    for condition, divider, lookup, txt, hyphen in cases:
+        if number < condition:
+            q, r = divmod(number, divider)
+            return (lookup[q] if divider < 1e3 else say(q)) + txt + (hyphen + say(r) if r else '')
+
+
+#%%
