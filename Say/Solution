@@ -1,3 +1,6 @@
+# Naive solution
+# All loops and conditionals
+
 def say(number):
     result = []
 
