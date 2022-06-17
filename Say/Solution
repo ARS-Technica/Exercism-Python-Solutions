@@ -12,106 +12,101 @@ def say(number):
         raise ValueError("input out of range")
 
 
-    ones = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten',]
-    tens = ['', 'teen', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety',]
-    
     ones = {'0':'zero', '1':'one', '2':'two', '3':'three', '4':'four', '5':'five', '6':'six', '7':'seven', '8':'eight', '9':'nine',}
     teens = {'10':'ten', '11':'eleven', '12':'twelve', '13':'thirteen', '14':'fourteen', '15':'fifteen', '16':'sixteen', '17':'seventeen', '18':'eighteen', '19':'nineteen'}
     tens = {'2':'twenty', '3':'thirty', '4':'forty', '5':'fifty', '6':'sixty', '7':'seventy', '8':'eighty', '9':'ninety',}
-    orders = ['hundred', 'thousand', 'million', 'billion', 'trillion']
+    orders = ['', 'thousand', 'million', 'billion', 'trillion']
 
-    
-    def segment(arr, count):
+
+    def segment(digits, count):
+       
         if len(digits) == 1:
-            pronounce = ones[str(number)]
-            
+            pronounce = ones[digits[0]]
+
             result.append(pronounce)
-            
+
+
         elif len(digits) == 2:
             if digits[1] == '1':
-                pronounce = teens[str(number)]
+                pronounce = teens[digits[1] + digits[0]]
             else:
                 if digits[0] == '0':
-                    pronounce = tens[str(digits[1])]
+                    pronounce = tens[digits[1]]
                 else:
                     pronounce = tens[digits[1]] + '-' + ones[digits[0]]
-                    
-            result.append(pronounce)                    
-            
+
+            result.append(pronounce)
+
 
         elif len(digits) == 3:
-            print(digits)
-
-
             if digits[2] == '0':
                 if digits[1] == '0':
                     if digits[0] == '0':
-                        pass
+                        pronounce = ''
                     else:
                         pronounce = ones[digits[0]]
                 else:
                     if digits[1] == '1':
-                        pronounce += teens[str(digits[1])+str(digits[0])]
+                        pronounce = teens[digits[1] + digits[0]]
                     else:
-                       pronounce += tens[digits[1]] + '-' + ones[digits[0]]
-                       
+                       pronounce = tens[digits[1]] + '-' + ones[digits[0]]
+
                 result.append(pronounce)
 
             else:
-                pronounce = ones[digits[2]] + ' hundred '
-                
+                pronounce = ones[digits[2]] + ' hundred'
+
                 if digits[1] == '0':
                     if digits[0] == '0':
-                        pass
+                        pronounce = ''
                     else:
-                        pronounce = ones[digits[0]]
+                        pronounce += ' ' + ones[digits[0]]
                 else:
                     if digits[1] == '1':
-                        pronounce += teens[str(digits[1])+str(digits[0])]
+                        pronounce += ' ' + teens[digits[1] + digits[0]]
                     else:
-                       pronounce += tens[digits[1]] + '-' + ones[digits[0]]
-                       
+                       pronounce += ' ' + tens[digits[1]] + '-' + ones[digits[0]]
+
                 result.append(pronounce)
-            
 
-        #result.append(pronounce + ' ' + orders[count])
-        
-        
-    digits = [i for i in list(str(number))][::-1]
-    chunks = [digits[i:i + 3] for i in range(0, len(digits), 3)] 
+
     count = 0
+    numbers = [i for i in list(str(number))][::-1]
+    ordered = [numbers[i:i + 3] for i in range(0, len(numbers), 3)][::-1]
 
-    for sub in chunks:
-        segment(sub, count)
+
+    for digits in ordered:
+        segment(digits, count)
         count += 1
 
-    return ''.join(result)
 
+    return ' '.join(result)
 
 
 if __name__ == "__main__":
-    '''
+
     print(say(0))               # "zero" 
     print(say(1))               # "one"
-    '''
-    '''
+
+
     print(say(14))              # "fourteen" 
     print(say(20))              # "twenty" 
     print(say(22))              # "twenty-two"
     print(say(56))              # "twenty-two"    
-    '''
+
 
     print(say(100))             # "one hundred" 
     print(say(123))             # "one hundred twenty-three" 
-    
-    '''
+
+
     print(say(1000))            # "one thousand" 
     print(say(1234))            # "one thousand two hundred thirty-four" 
     print(say(1000000))         # "one million" 
     print(say(1002345))         # "one million two thousand three hundred forty-five"
     print(say(1000000000))      # "one billion") 
-    '''
+
     '''
     print(say(987654321123))        
     # "nine hundred eighty-seven billion six hundred fifty-four million three hundred twenty-one thousand one hundred twenty-three",
     '''
+
