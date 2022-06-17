@@ -7,7 +7,7 @@ def say(number):
         # if the number is negative
         raise ValueError("input out of range")
 
-    if number > 999_999_999_99:     
+    if number > 999_999_999_999:     
         # if the number is larger than 999,999,999,99
         raise ValueError("input out of range")
 
@@ -15,11 +15,10 @@ def say(number):
     ones = {'0':'zero', '1':'one', '2':'two', '3':'three', '4':'four', '5':'five', '6':'six', '7':'seven', '8':'eight', '9':'nine',}
     teens = {'10':'ten', '11':'eleven', '12':'twelve', '13':'thirteen', '14':'fourteen', '15':'fifteen', '16':'sixteen', '17':'seventeen', '18':'eighteen', '19':'nineteen'}
     tens = {'2':'twenty', '3':'thirty', '4':'forty', '5':'fifty', '6':'sixty', '7':'seventy', '8':'eighty', '9':'ninety',}
-    orders = ['', 'thousand', 'million', 'billion', 'trillion']
+    orders = ['', '', 'thousand', 'million', 'billion', 'trillion']
 
 
     def segment(digits, count):
-       
         if len(digits) == 1:
             pronounce = ones[digits[0]]
 
@@ -50,7 +49,7 @@ def say(number):
                         pronounce = teens[digits[1] + digits[0]]
                     else:
                        pronounce = tens[digits[1]] + '-' + ones[digits[0]]
-
+                       
                 result.append(pronounce)
 
             else:
@@ -58,7 +57,7 @@ def say(number):
 
                 if digits[1] == '0':
                     if digits[0] == '0':
-                        pronounce = ''
+                        pronounce += ''
                     else:
                         pronounce += ' ' + ones[digits[0]]
                 else:
@@ -70,6 +69,7 @@ def say(number):
                 result.append(pronounce)
 
 
+    ans = ''
     count = 0
     numbers = [i for i in list(str(number))][::-1]
     ordered = [numbers[i:i + 3] for i in range(0, len(numbers), 3)][::-1]
@@ -79,12 +79,17 @@ def say(number):
         segment(digits, count)
         count += 1
 
+    for i, n in enumerate(result):
+        if n:
+            ans += n
+            ans += ' '
+            ans += orders[len(result[i::])]
+            ans += ' '
 
-    return ' '.join(result)
+    return ans.strip()
 
 
 if __name__ == "__main__":
-
     print(say(0))               # "zero" 
     print(say(1))               # "one"
 
@@ -92,21 +97,22 @@ if __name__ == "__main__":
     print(say(14))              # "fourteen" 
     print(say(20))              # "twenty" 
     print(say(22))              # "twenty-two"
-    print(say(56))              # "twenty-two"    
+    print(say(56))              # "fifty-six"    
 
 
-    print(say(100))             # "one hundred" 
     print(say(123))             # "one hundred twenty-three" 
 
 
-    print(say(1000))            # "one thousand" 
     print(say(1234))            # "one thousand two hundred thirty-four" 
-    print(say(1000000))         # "one million" 
     print(say(1002345))         # "one million two thousand three hundred forty-five"
-    print(say(1000000000))      # "one billion") 
 
-    '''
+    
+    print(say(100))             # "one hundred" 
+    print(say(1000))            # "one thousand" 
+    print(say(1000000))         # "one million" 
+    print(say(1000000000))      # "one billion")     
+
+
     print(say(987654321123))        
     # "nine hundred eighty-seven billion six hundred fifty-four million three hundred twenty-one thousand one hundred twenty-three",
-    '''
 
