@@ -71,4 +71,4 @@ Solutions to programming exercises on exercism.org written in Python.
 | 61 | [Roman Numerals](https://exercism.org/tracks/python/exercises/roman-numerals) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Roman%20Numerals) | Dictionaries |
 | 62 | [Matching Brackets](https://exercism.org/tracks/python/exercises/matching-brackets) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Matching%20Brackets) | Conditionals |
 | 63 | [Say](https://exercism.org/tracks/python/exercises/say) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Say) | Lists |
-
+| 64 | [Pig Latin](https://exercism.org/tracks/python/exercises/pig-latin) | [Python](https://github.com/ARS-Technica/Exercism-Python-Solutions/tree/main/Pig%20Latin) | Conditionals |
