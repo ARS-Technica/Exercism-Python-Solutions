@@ -1,4 +1,4 @@
-# 
+# Naive solution.  Nothing but loops and conditionals. Veeery long.
 
 
 def translate(text):
@@ -110,3 +110,45 @@ if __name__ == "__main__":
     print(translate("square"))                                                      # "aresquay"
     print(translate("therapy"))                                                     # "erapythay"
     print(translate("quick fast run"))                                              # "ickquay astfay unray"
+
+
+#%%
+
+# Refactored.  Shorter.  Slightly better.
+
+
+def transform(word, count):
+    for _ in range(count):
+        word.append(word.pop(0))
+    word.append('a')
+    word.append('y')
+    return word
+
+
+def translate(text):
+    consonant_clusters = ['sm', 'sn', 'st', 'sw', 'sk', 'sl', 'sp', 'sf', 'th',
+                          'dw', 'tw', 'dr', 'tr', 'kw', 'kr', 'kl', 'pr', 'fr',
+                          'br', 'gr', 'pl', 'fl', 'bl', 'gl', 'sh', 'ch', 'qu',
+                          'sh', 'sc', 'rh', 'sch', 'shr', 'thr', 'thw',]
+
+    vowel_sounds = ['a', 'e', 'i', 'o', 'u']
+
+    result = []
+    sentence = [list(word) for word in text.split()]
+
+    for word in sentence: 
+        if word[0] in vowel_sounds: result.append(transform(word, 0))
+        if len(word) == 2 and word[1] == 'y': result.append(transform(word, 1))
+
+        elif word[0] not in vowel_sounds:
+            three = word[0] + word[1] + word[2]
+            two = word[0] + word[1]           
+
+            if three in consonant_clusters: result.append(transform(word, 3))
+            elif two == 'xr' or two == 'yt': result.append(transform(word, 0))
+            elif two in consonant_clusters: result.append(transform(word, 2))
+            elif word[1] + word[2] == 'qu': result.append(transform(word, 3))
+            else: result.append(transform(word, 1))
+
+    return ' '.join([''.join(word) for word in result]).strip()
+
