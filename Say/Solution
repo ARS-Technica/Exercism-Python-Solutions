@@ -122,3 +122,82 @@ if __name__ == "__main__":
     print(say(987654321123))        
     # "nine hundred eighty-seven billion six hundred fifty-four million three hundred twenty-one thousand one hundred twenty-three",
 
+
+#%%
+
+
+# Refactored code after realizing I could be using mod and floor division
+# to break up number input into chunks
+
+def say(number):
+    ones = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight',
+            'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen',
+            'sixteen', 'seventeen', 'eighteen', 'nineteen']
+
+    tens = {20:'twenty', 30:'thirty', 40:'forty', 50:'fifty', 60:'sixty',
+            70:'seventy', 80:'eighty', 90:'ninety'}
+
+
+    if number < 0:
+        raise ValueError("input out of range")
+
+    elif 0 <= number < 20:
+        return ones[number]
+
+    elif 20 <= number < 100:
+        if number % 10 == 0:
+            return tens[number]
+        return tens[number // 10 * 10] + '-' + ones[number % 10]
+
+    elif 100 <= number < 1_000:
+        if number % 100 == 0:
+            return ones[number // 100] + ' hundred'
+        return ones[number // 100] + ' hundred ' + say(number % 100)  
+
+    elif 1_000 <= number < 1_000_000:
+        if number % 1_000 == 0:
+            return ones[number // 1_000] + ' thousand'
+        return say(number // 1_000) + ' thousand ' + say(number % 1_000) 
+
+    elif 1_000_000 <= number < 1_000_000_000:
+        if number % 1_000_000 == 0:
+            return say(number // 1_000_000) + ' million'
+        return say(number // 1_000_000) + ' million ' + say(number % 1_000_000) 
+
+    elif 1_000_000_000 <= number < 1_000_000_000_000:
+        if number % 1_000_000_000 == 0:
+            return ones[number // 1_000_000_000] + ' billion'
+        return say(number // 1_000_000_000) + ' billion ' + say(number % 1_000_000_000)        
+
+    else: # if the number is larger than 999,999,999,99
+        raise ValueError("input out of range") 
+
+
+if __name__ == "__main__":
+    print(say(0))               # "zero" 
+    print(say(1))               # "one"
+
+    print(say(14))              # "fourteen" 
+    print(say(20))              # "twenty" 
+    print(say(22))              # "twenty-two"
+    print(say(56))              # "fifty-six"    
+
+    print(say(123))             # "one hundred twenty-three" 
+    print(say(170))             # "one hundred seventy"  
+
+    print(say(1234))            # "one thousand two hundred thirty-four" 
+    print(say(1002345))         # "one million two thousand three hundred forty-five"
+
+    print(say(100))             # "one hundred" 
+    print(say(1000))            # "one thousand" 
+    print(say(1000000))         # "one million" 
+    print(say(1000000000))      # "one billion")     
+
+    print(say(987654321123))        
+    # "nine hundred eighty-seven billion six hundred fifty-four million three hundred twenty-one thousand one hundred twenty-three",
+
+
+# 
+
+#%%
+
